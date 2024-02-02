@@ -22,9 +22,9 @@ body::before {
   position: fixed;
   background: #040404 url("../img/bg.jpg") top right no-repeat;
   background-size: cover;
-  left: 0;
-  right: 0;
-  top: 0;
+  left: 10;
+  right: 10;
+  top: 10;
   height: 100vh;
   z-index: -1;
 }
