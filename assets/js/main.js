@@ -188,23 +188,23 @@
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
+    let my_learning_labContainer = select('.my_learning_lab-container');
+    if (my_learning_labContainer) {
+      let my_learning_labIsotope = new Isotope(my_learning_labContainer, {
+        itemSelector: '.my_learning_lab-item',
         layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let my_learning_labFilters = select('#my_learning_lab-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#my_learning_lab-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        my_learning_labFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
+        my_learning_labIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
       }, true);
@@ -213,25 +213,25 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate my_learning_lab lightbox 
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+  const my_learning_labLightbox = GLightbox({
+    selector: '.my_learning_lab-lightbox'
   });
 
   /**
-   * Initiate portfolio details lightbox 
+   * Initiate my_learning_lab details lightbox 
    */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
+  const my_learning_labDetailsLightbox = GLightbox({
+    selector: '.my_learning_lab-details-lightbox',
     width: '90%',
     height: '90vh'
   });
 
   /**
-   * Portfolio details slider
+   * my_learning_lab details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.my_learning_lab-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
